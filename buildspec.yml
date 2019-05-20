@@ -5,10 +5,10 @@ phases:
     commands:
       - cd api
       - npm i
-  pre-build:
+  pre_build:
     commands:
       - npm test
-  post-build:
+  post_build:
     commands:
       - sls deploy
 
