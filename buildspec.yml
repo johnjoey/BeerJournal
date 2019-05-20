@@ -7,12 +7,13 @@ phases:
     commands:
       - cd api
       - npm i
+      - npm i -g serverless
   pre_build:
     commands:
       - npm test
   post_build:
     commands:
-      - sls deploy
+      - serverless deploy
 
 cache:
   paths:
