@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - cd api
+      - npm i
+  pre-build:
+    commands:
+      - npm test
+  post-build:
+    commands:
+      - sls deploy
+
+cache:
+  paths:
+    - 'node_modules/**/*'
